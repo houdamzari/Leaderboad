@@ -1,8 +1,17 @@
 import './style.css';
-function component() {
-  const element = document.createElement('div');
+import { arr } from './modules/data.js';
+import { tableDom } from './modules/domSelections.js';
 
-  return element;
-}
+let row = '';
+export const table = () => {
+  arr.forEach((item) => {
+    console.log(item);
+    row = `
+          <tr>
+            <td>Name :</td>
+            <td>${item}</td>
+          </tr>`;
+  });
+};
 
-document.body.appendChild(component());
+tableDom.innerHTML += row;

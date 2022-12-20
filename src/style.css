@@ -18,7 +18,7 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .landing__section-recentScores {
@@ -34,4 +34,15 @@ input {
   width: fit-content;
   padding: 5px 10px;
   align-self: flex-end;
+}
+
+.landing__section-recentScores-flex {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.landing__section-recentScores-button {
+  padding: 5px;
+  height: fit-content;
 }
