@@ -3,15 +3,15 @@ import { arr } from './modules/data.js';
 import { tableDom } from './modules/domSelections.js';
 
 let row = '';
-export const table = () => {
+const table = () => {
   arr.forEach((item) => {
-    console.log(item);
-    row = `
+    row += `
           <tr>
             <td>Name :</td>
-            <td>${item}</td>
+            <td>${item.Name}</td>
           </tr>`;
   });
 };
+table();
 
-tableDom.innerHTML += row;
+tableDom.innerHTML = row;
