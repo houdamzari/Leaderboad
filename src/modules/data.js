@@ -1,7 +1,8 @@
 /* eslint-disable linebreak-style */
-import { baseUrl } from './env';
 import axios from 'axios';
+import { baseUrl } from './env';
 import { scoreDom, nameDom, submitButton } from './domSelections.js';
+
 export const arr = [
   {
     Name: 'lalla',
@@ -26,16 +27,24 @@ scoreDom.addEventListener('change', (e) => {
   });
 });
 
-const newScore = {
-  user: username,
-  score: scoreInput,
-};
+let newScore = {};
+setTimeout(() => {
+  newScore = {
+    user: username,
+    score: scoreInput,
+  };
+  console.log(newScore);
+}, 1000);
 
 submitButton.addEventListener('click', async () => {
-  await axios
-    .post(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/](https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores)',
+  setTimeout(() => {
+    newScore = {
+      user: username,
+      score: scoreInput,
+    };
+    axios.post(
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores',
       newScore
-    )
-    .then((response) => console.log(response));
+    );
+  }, 1000);
 });
