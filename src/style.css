@@ -78,3 +78,11 @@ input {
   font-size: 16px;
   font-family: sans-serif;
 }
+
+.white-row {
+  background-color: white;
+}
+
+.grey-row {
+  background-color: #eee;
+}
