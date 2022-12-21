@@ -1,6 +1,7 @@
 body {
   background-color: aliceblue;
   margin: 20px;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -12,6 +13,9 @@ h1 {
   flex-direction: column;
   gap: 15px;
   width: fit-content;
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 
 .landing__section {
@@ -42,7 +46,8 @@ input {
   align-items: center;
 }
 
-.landing__section-recentScores-button {
+.landing__section-recentScores-button,
+.landing__section-addScore-button {
   padding: 5px 10px;
   background-color: aqua;
   border-radius: 6px;
@@ -58,6 +63,14 @@ input {
   border: 1px solid rgb(113, 110, 110);
   margin: 5px;
   transition: all 0.4s;
+}
+
+.table:hover .table-row {
+  transform: scale(1.1);
+}
+
+.table:hover .table-row:not(:hover) {
+  transform: scale(0.9);
 }
 
 .user,
