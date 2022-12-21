@@ -10,9 +10,9 @@ const table = () => {
 
   array.forEach((item) => {
     row += `
-          <tr>
-            <td>${item.user}</td>
-            <td>${item.score}</td>
+          <tr class="table-row">
+            <td class="user">${item.user}</td>
+            <td class="score">${item.score}</td>
           </tr>`;
   });
   tableDom.innerHTML = row;
@@ -22,7 +22,7 @@ table();
 refreshButton.addEventListener('click', async () => {
   await axios
     .get(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores/',
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores/'
     )
     .then((response) => {
       const arr = response.data.result;
