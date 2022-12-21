@@ -24,29 +24,17 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Todo List] <a name="about-project"></a>
+# 📖 [Leaderboard] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[Todo List]** is a to do list web application built with html , css and js.
+**[Leaderboard]**is a web application that displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.built with html , css and js.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 - HTML
 - CSS
 - JS
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[Add Todo list item]**
-- **[Remove Todo list item]**
-- **[Update Todo list item]**
-- **[Drag Todo list item]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -106,18 +94,6 @@ Example commands:
 
   -- Portfolio [@houdamzari](https://houdamzari.github.io/Portfolio-Website/)
   <a name="readme-top"></a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

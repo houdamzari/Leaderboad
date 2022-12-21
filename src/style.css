@@ -1,0 +1,47 @@
+body {
+  background-color: aliceblue;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 66px;
+}
+
+.landing__section-addScore {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+}
+
+.landing__section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.landing__section-recentScores {
+  width: 50%;
+}
+
+input {
+  width: 300px;
+  padding: 10px 15px;
+}
+
+.landing__section-addScore-button {
+  width: fit-content;
+  padding: 5px 10px;
+  align-self: flex-end;
+}
+
+.landing__section-recentScores-flex {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.landing__section-recentScores-button {
+  padding: 5px;
+}
