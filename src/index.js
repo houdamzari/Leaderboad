@@ -22,7 +22,7 @@ table();
 refreshButton.addEventListener('click', async () => {
   await axios
     .get(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores/'
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores/',
     )
     .then((response) => {
       const arr = response.data.result;
