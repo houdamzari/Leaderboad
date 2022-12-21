@@ -17,16 +17,16 @@ export const postData = () => {
 
   let newScore = {};
 
-  submitButton.addEventListener('click', async () => {
-    setTimeout(() => {
+  submitButton.addEventListener('click', () => {
+    setTimeout(async () => {
       newScore = {
         user: username,
         score: scoreInput,
       };
-      axios
+      await axios
         .post(
           'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores',
-          newScore,
+          newScore
         )
         .then(() => {
           nameDom.value = '';

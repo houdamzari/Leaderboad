@@ -19,8 +19,8 @@ const table = () => {
 };
 table();
 
-refreshButton.addEventListener('click', () => {
-  axios
+refreshButton.addEventListener('click', async () => {
+  await axios
     .get(
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores/',
     )
