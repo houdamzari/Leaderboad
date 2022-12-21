@@ -1,17 +1,36 @@
 import './style.css';
-import { arr } from './modules/data.js';
-import { tableDom } from './modules/domSelections.js';
+import axios from 'axios';
+import { postData } from './modules/postData.js';
+import { tableDom, refreshButton } from './modules/domSelections.js';
 
+let array = [];
 let row = '';
 const table = () => {
-  arr.forEach((item) => {
+  row = '';
+
+  array.forEach((item) => {
     row += `
           <tr>
-            <td>Name :</td>
-            <td>${item.Name}</td>
+            <td>${item.user}</td>
+            <td>${item.score}</td>
           </tr>`;
   });
+  tableDom.innerHTML = row;
 };
 table();
 
-tableDom.innerHTML = row;
+refreshButton.addEventListener('click', async () => {
+  await axios
+    .get(
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/OQWx7deKAZ2e0dEXiBlE/scores/',
+    )
+    .then((response) => {
+      const arr = response.data.result;
+      array = arr;
+      table();
+    });
+});
+
+refreshButton.click();
+
+postData();
