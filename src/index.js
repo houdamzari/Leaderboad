@@ -8,11 +8,11 @@ let row = '';
 const table = () => {
   row = '';
 
-  array.forEach((item) => {
+  array.forEach((item, i) => {
     row += `
-          <tr>
-            <td>${item.user}</td>
-            <td>${item.score}</td>
+          <tr class="table-row ${i % 2 ? 'white-row' : 'grey-row'} ">
+            <td class="user">${item.user}</td>
+            <td class="score">${item.score}</td>
           </tr>`;
   });
   tableDom.innerHTML = row;
